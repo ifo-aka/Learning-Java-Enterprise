@@ -1,0 +1,37 @@
+# Java compiled files
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+
+# Eclipse project files
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA project files
+.idea/
+*.iml
+
+# VS Code project settings
+.vscode/
+
+# Maven / Gradle
+target/
+build/
+out/
+
+# Web server temp
+tomcat/work/
+tomcat/temp/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Node/npm (if frontend is used)
+node_modules/
+dist/
