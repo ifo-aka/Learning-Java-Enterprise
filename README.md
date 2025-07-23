@@ -1,75 +1,103 @@
-# 🌐 Mini Blog Web App
+# 🌐 MiniBlog Web App
 
-A full-stack **Java Servlet + JSP** application with **MongoDB** backend — built as a practice project to simulate a mini Facebook-style blog platform.
+A full-stack blog platform built with **Java Servlets, JSP**, and **MongoDB**, simulating a mini Facebook-style environment. Users can sign up, log in, post public or private blogs, comment, like, and manage their content in real-time. This project was built to practice modern web development, backend integration, and UI design from scratch.
 
 ---
 
-## 📌 Features Implemented
+## 🚀 Features
 
 ✅ User Registration & Login  
-✅ Session-based Authentication  
-✅ Secure MongoDB Integration  
-✅ Create Posts (Public or Private)  
-✅ View Own Posts (Private Dashboard)  
-✅ Toggle Light/Dark Theme  
-✅ Responsive Glassmorphism UI  
+✅ Session-Based Authentication  
+✅ Create Posts (Public & Private)  
+✅ Personal Dashboard with Post Stats  
+✅ Real-Time Comments & Like System  
+✅ Prevent Duplicate Likes  
+✅ Update/Delete Own Posts  
+✅ View Public Posts of Other Users  
+✅ Responsive UI (Dark/Light Mode)  
+✅ Profile Info Modal  
+✅ MongoDB Integration (Java Driver)  
+✅ Clean and Modular Code Structure
+
+---
+
+## 🧠 Architecture Overview
+
+- 🗂 **MVC Pattern**: Clean separation of concerns (Servlets = Controller, JavaBeans = Model, JSP = View)  
+- 🧩 **MongoDB NoSQL**: Documents for users, nested posts & interactions  
+- 🔒 **Session Handling**: Java `HttpSession` for secure login state  
+- 📊 **Like/Comment Control**: Backend logic to avoid duplicate interactions  
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: HTML, CSS, JSP  
-- **Backend**: Java Servlets (JSP, HttpSession)  
-- **Database**: MongoDB (Java Driver)  
-- **Build Tool**: Apache Tomcat  
-- **IDE**: IntelliJ / Eclipse  
+| Layer       | Technology               |
+|------------|---------------------------|
+| Frontend   | HTML, CSS, JavaScript, JSP |
+| Backend    | Java Servlets (JSP, HttpSession) |
+| Database   | MongoDB (Official Java Driver) |
+| Server     | Apache Tomcat 10+ |
+| IDE        | IntelliJ IDEA / Eclipse |
 
 ---
 
-## 📂 Project Structure
+## 📂 Folder Structure
 
-📦 BlogApp
-├── 📁 Controller (Servlets)
-│ └── Login, Logout, Register, PostHandler
-├── 📁 Model (JavaBeans)
-│ └── UserModel, Post
-├── 📁 View (JSP Pages)
-│ └── Login.jsp, SignUp.jsp, UserUi.jsp, makePost.jsp
-├── 📁 style/
-│ └── CSS files (Login.css, userUi.css)
-├── 📁 script/
-│ └── userUI.js (theme toggle, dropdown)
-├── 📁 dao/
-│ └── DataBaseUtil.java
-└── web.xml
+📦 MiniBlogApp/
+├── 📁 controller/ # Java Servlets (Login, Logout, Register, PostHandler)
+├── 📁 model/ # JavaBeans (UserModel, Post, PublicPosts)
+├── 📁 view/ # JSP Pages (Login.jsp, SignUp.jsp, makePost.jsp, PublicView.jsp)
+├── 📁 script/ # JavaScript (UI logic, theme toggle, dropdown, like/comment)
+├── 📁 style/ # CSS files (Dark Theme, Glassmorphism)
+├── 📁 dao/ # MongoDB Util (DataBaseUtil.java)
+└── web.xml # Servlet Config
 
 ---
 
-## 🚧 Upcoming Features (WIP 🚀)
-
-- [ ] Public Feed (view posts from all users)  
-- [ ] Like & Comment System  
-- [ ] Edit / Delete Post  
-- [ ] Profile Page with Total Post Count  
-- [ ] Admin Dashboard  
-- [ ] REST API integration (Phase 6)  
-- [ ] Spring Boot refactor (Phase 8–10)
-
----
-
-## ⚙️ Run Locally
+## 🧪 How to Run Locally
 
 > Prerequisites:
 - Java 17+
 - Apache Tomcat 10+
-- MongoDB running on `localhost:27017`
+- MongoDB running locally on `mongodb://localhost:27017`
 
-1. Clone the repo  
-   ```bash
-   git clone https://github.com/your-username/blog-webapp.git
-🧠 About the Developer
-👨‍💻 Ifham
-A passionate full-stack & cybersecurity enthusiast, building real-world Java web apps from scratch while mastering backend systems, scalable architecture, and professional dev patterns.
-⭐ Support the Journey
-If you find this useful, drop a ⭐ on the repo and follow the journey as the app evolves from scratch to full-stack production level!
+### 🧱 Setup Steps
 
+```bash
+# 1. Clone the Repository
+git clone https://github.com/your-username/MiniBlogApp.git
+
+# 2. Open in IntelliJ or Eclipse
+# 3. Configure Tomcat Server & MongoDB
+# 4. Build and Deploy WAR file (or run directly)
+# 5. Open in browser: http://localhost:8080/MiniBlogApp
+🚧 Upcoming Features
+ Admin Dashboard (User Management)
+
+ RESTful API Support (Phase 6)
+
+ Notification System
+
+ Post Sharing & Bookmarking
+
+ Spring Boot Refactor (Phase 8–10)
+
+ Email Verification & Reset Password
+
+ Enhanced Security (JWT, BCrypt)
+
+👨‍💻 About the Developer
+Ifham – A passionate full-stack developer and cybersecurity enthusiast from Pakistan 🇵🇰.
+Loves crafting real-world projects from scratch, working with backends, and designing secure, interactive user interfaces.
+
+💬 “Every project is a new battlefield to sharpen my code and logic.”
+
+⭐ Support
+If you found this project helpful or inspiring:
+
+Star the repo ⭐
+
+Share with other devs 💬
+
+Follow for updates 🔔
