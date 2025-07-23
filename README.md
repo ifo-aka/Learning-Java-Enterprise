@@ -72,6 +72,14 @@ git clone https://github.com/your-username/MiniBlogApp.git
 # 4. Build and Deploy WAR file (or run directly)
 # 5. Open in browser: http://localhost:8080/MiniBlogApp
 ```
+## 📸 Screenshots
+
+### 🏠 Personal Dashboard
+![Dashboard](Screenshots/personalDashboard.png)
+
+### 🌍 Public Feed with Posts
+![Public Feed](screenshots/public-feed.gif)
+
 🚧 Upcoming Features
  Admin Dashboard (User Management)
 
