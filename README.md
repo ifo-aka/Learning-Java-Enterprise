@@ -67,11 +67,11 @@ A full-stack blog platform built with **Java Servlets, JSP**, and **MongoDB**, s
 ```bash
 # 1. Clone the Repository
 git clone https://github.com/your-username/MiniBlogApp.git
-```
 # 2. Open in IntelliJ or Eclipse
 # 3. Configure Tomcat Server & MongoDB
 # 4. Build and Deploy WAR file (or run directly)
 # 5. Open in browser: http://localhost:8080/MiniBlogApp
+```
 🚧 Upcoming Features
  Admin Dashboard (User Management)
 
