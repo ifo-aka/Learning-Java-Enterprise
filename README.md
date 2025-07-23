@@ -75,7 +75,7 @@ git clone https://github.com/your-username/MiniBlogApp.git
 ## 📸 Screenshots
 
 ### 🏠 Personal Dashboard
-![Dashboard](src/Screenshots/personalDashboard.png)
+![Dashboard](src/main/Screenshots/personalDashboard.png)
 
 ### 🌍 Public Feed with Posts
 ![Public Feed](screenshots/public-feed.gif)
