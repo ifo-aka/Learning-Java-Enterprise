@@ -1,0 +1,465 @@
+@charset "UTF-8";
+
+/* ===== Reset & Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== Header Navigation ===== */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0077b6;
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+.profile-container {
+  position: relative;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.dropdown-box {
+  display: none;
+  position: absolute;
+  right: 41px;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  color: #333;
+  text-align: left;
+  min-width: 220px;
+  align-items: center;
+  justify-content:center;
+  flex-direction:column;
+  
+}
+
+.dropdown-box p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.dropdown-box a {
+  display: block;
+  margin-top: 0.5rem;
+  color: #d00000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ===== Floating Add Button ===== */
+.add-post-btn {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background: #00b4d8;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s;
+  z-index: 1000;
+}
+
+.add-post-btn:hover {
+  background: #0096c7;
+}
+
+/* ===== Profile Summary ===== */
+.profile-summary {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 800px;
+}
+
+.profile-summary-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.user-img-box img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.summary-metrics {
+    justify-content: center;
+    display: flex
+;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.metric-box {
+  text-align: center;
+}
+
+.metric-box h4 {
+  font-size: 1rem;
+  color: #555;
+}
+
+.metric-box p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #111;
+}
+
+/* ===== Main Content ===== */
+main {
+  max-width: 95%;
+  margin: auto;
+  padding: 30px 0;
+}
+
+/* ===== Posts Container ===== */
+.postsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  overflow-y: auto;
+  max-height: 80vh;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.03);
+}
+
+.postsContainer::-webkit-scrollbar {
+  width: 8px;
+}
+.postsContainer::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 4px;
+}
+
+/* ===== Post Wrapper ===== */
+.post-wrapper {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===== Post ===== */
+.post {
+  background: #fff;
+  border-left: 4px solid #00b4d8;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+  width: 100%;
+  color: #333;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  border-left-color: #0077b6;
+  box-shadow: 0 6px 12px rgba(0, 119, 182, 0.15);
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* ===== Dots & Menu ===== */
+.dots-btn {
+  background: transparent;
+  color: #00b4d8;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.dots-btn:hover {
+  transform: rotate(90deg);
+  color: #0077b6;
+}
+
+.post-menu {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-left: 3px solid #00b4d8;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  z-index: 1;
+}
+.hidden{
+	display:none;
+}
+.menu-btn {
+  background-color: transparent;
+  border: none;
+  color: #0077b6;
+  padding: 8px 12px;
+  text-align: left;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.menu-btn:hover {
+  background-color: #e0f7ff;
+}
+
+/* ===== Post Body ===== */
+.post h3 {
+  color: #0077b6;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.post-description {
+  background-color: #f0f2f5;
+  border: 1px dashed #00b4d8;
+  border-radius: 8px;
+  padding: 12px;
+  height: 20vh;
+  font-size: 0.9rem;
+  color: #444;
+  overflow-y: auto;
+}
+
+.post-description::-webkit-scrollbar {
+  width: 6px;
+}
+.post-description::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 3px;
+}
+
+.post-feeling {
+  margin-top: 5px;
+  font-size: 1.1rem;
+}
+
+.feeling-happy { color: #28a745; }
+.feeling-sad { color: #007bff; }
+.feeling-angry { color: #dc3545; }
+.feeling-excited { color: #ffc107; }
+.feeling-anxious { color: #fd7e14; }
+
+.btn-cont {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+button {
+  background-color: transparent;
+  color: #00b4d8;
+  border: 2px solid #00b4d8;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #e0f7ff;
+  color: #0077b6;
+}
+
+.commentandbtn{
+	margin-top: 10px;
+	display:flex;
+	align-items:center;
+	justify-content : space-between;
+	
+	}
+/* ===== Comments Section ===== */
+.public-comments {
+  background-color: #f9f9f9;
+  border-left: 3px solid #00b4d8;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 12px;
+  width: 100%;
+  max-height: 30vh;
+  overflow-y: auto;
+  display:none;
+}
+
+.comment {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #0077b6;
+  margin-bottom: 5px;
+}
+
+.comment-time {
+  font-style: italic;
+  color: #999;
+}
+
+.comment-body {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* ===== Update Form ===== */
+.update-form-wrapper {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  z-index: 1000;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  padding: 30px 40px;
+  border-radius: 12px;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 90%;
+  padding: 10px;
+
+  background-color: #f0f2f5;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: #333;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+/* ===== Warning Box ===== */
+.warning {
+  position: absolute;
+  top: 30px;
+  left: 40%;
+  display: none;
+  min-width: 300px;
+  max-width: 500px;
+  background-color: #ffe6e6;
+  color: #cc0000;
+  padding: 15px 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 0 2px 10px rgba(255, 51, 51, 0.2);
+  z-index: 1000;
+}
+
+/* ===== Responsive Design ===== */
+@media screen and (max-width: 768px) {
+  .post-wrapper {
+    width: 100%;
+  }
+  .add-post-btn {
+    top: 90px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .post-wrapper { width: 80%; }
+}
+@media screen and (min-width: 1000px) {
+  .post-wrapper { width: 60%; }
+}
+@media screen and (min-width: 1500px) {
+  .post-wrapper { width: 40%; }
+}
+.show{
+	display:block;
+}
