@@ -78,7 +78,10 @@ git clone https://github.com/your-username/MiniBlogApp.git
 ![Dashboard](src/main/Screenshots/personalDashboard.png)
 
 ### 🌍 Public Feed with Posts
-![Public Feed](screenshots/public-feed.gif)
+![Public Feed](src/main/Screenshots/homeUi.png)
+ ### Login Ui
+ ![Login Ui] (src/main/main/Screenshots/loginUi.png)
+ 
 
 🚧 Upcoming Features
  Admin Dashboard (User Management)
