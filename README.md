@@ -80,7 +80,7 @@ git clone https://github.com/your-username/MiniBlogApp.git
 ### 🌍 Public Feed with Posts
 ![Public Feed](src/main/Screenshots/homeUi.png)
  ### Login Ui
- ![Login Ui] (src/main/main/Screenshots/loginUi.png)
+ ![Public Feed](src/main/Screenshots/loginUI.png)
  
 
 🚧 Upcoming Features
